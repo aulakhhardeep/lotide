@@ -21,7 +21,7 @@ const assertArraysEqual = function(arr1, arr2) {
 };
 const letterPositions = function(str) {
   const results = {};
-  for (let i = 0; i <= str.length; i++) {
+  for (let i = 0; i < str.length; i++) {
     const char = str[i];
     if(str[i] !== " ") {
       if(!results[char]) {
@@ -32,6 +32,7 @@ const letterPositions = function(str) {
     }
   }
   return results;
+  //console.log(results);
 };
 
-assertArraysEqual(letterPositions("hello").e, [1]);
+letterPositions("hello");

@@ -27,9 +27,8 @@ const eqObjects = function(object1, object2) {
     } else {
       if(object1[key] !== object2[key]) { //object1[key] is giving the value of key
         return false;
-        }
-    }
-    
+      }
+      }  
   }
   return true;
 };
@@ -41,6 +40,8 @@ const assertObjectEqual = function(actual, expected) {
     console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+
+//Test cases:
 
 const shirtObject = { color: "red", size: "medium" };
 const anotherShirtObject= { size: "medium", color: "red" };

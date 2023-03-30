@@ -1,5 +1,5 @@
 const countLetters = function(sentenceOfLetters) {
-  let x = sentenceOfLetters.replaceAll(" ", "");
+  let x = sentenceOfLetters.replaceAll(" ", ""); // replaceAll function is removing all occurences of blank space.
   //console.log(x);
   let results = {}; // object
   for(const letter of x) {

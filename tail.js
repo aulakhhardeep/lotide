@@ -4,7 +4,7 @@ const tail = function(arr) {
     tailedArr.push(arr[i]);
   }
   console.log(tailedArr);
-  return tailedArr; 
+  return tailedArr;
 };
 
 module.exports = tail;

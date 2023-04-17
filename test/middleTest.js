@@ -4,4 +4,4 @@ const assertArraysEqual = require('../assertArraysEqual');
 
 //Test Code
 
-assertArraysEqual(middle([1,2,3,8,7,5,6]), [8]); 
+assertArraysEqual(middle([1,2,3,8,7,5,6]), [8]);

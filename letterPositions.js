@@ -16,13 +16,13 @@ const letterPositions = function(sentence) {
 };
 
 const eqArrays = function(arr1, arr2) {
-  if(arr1.length !== arr2.length) { // checking the length of both arrays.
+  if (arr1.length !== arr2.length) { // checking the length of both arrays.
     return false;
   } else {
-    for (i = 0; i < arr2.length; i++) {
-      if(arr1[i] !== arr2[i]) {
+    for (let i = 0; i < arr2.length; i++) {
+      if (arr1[i] !== arr2[i]) {
         return false;
-      } 
+      }
     }
   }
   return true;
@@ -39,6 +39,6 @@ const assertArraysEqual = function(arr1, arr2) {
 
 
 //Test code
-assertArraysEqual(letterPositions("hello Hardeep").h, [0]); 
-assertArraysEqual(letterPositions("hello Hardeep").o, [4]); 
-assertArraysEqual(letterPositions("hello Hardeep").p, [0]); 
+assertArraysEqual(letterPositions("hello Hardeep").h, [0]);
+assertArraysEqual(letterPositions("hello Hardeep").o, [4]);
+assertArraysEqual(letterPositions("hello Hardeep").p, [0]);

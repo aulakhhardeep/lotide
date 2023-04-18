@@ -5,7 +5,7 @@ const findKeyByValue = function(object1, value) {
   //console.log(keys); // with this getting keys in a array.
   for (let key of keys) {
     // console.log(key); // getting keys individuually.
-    if (object1[key] === value) {
+    if (object1[key]) {
       return key;
     }
   }

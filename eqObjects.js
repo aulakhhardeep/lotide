@@ -1,23 +1,5 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) { // checking the length of both arrays.
-    return false;
-  } else { //if arrays are equal in length then use for loop to go through each element of that arrays
-    for (let i = 0; i < arr2.length; i++) {
-      if (arr1[i] !== arr2[i]) { //checking if value of elements of array1 is not equal to array2.
-        return false;
-      }
-    }
-  }
-  return true; // if value is equal so return true.
-};
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const eqArrays = require('./eqArrays');
+const assertEqual = require('./assertEqual');
 
 const eqObjects = function(object1, object2) {
   let key1 = Object.keys(object1); // Object.keys(object1) is returning keys.
@@ -47,3 +29,5 @@ assertEqual(eqObjects(carObject , anotherCarObject), true);
 const suvCarObject = { year: "2020", make: ["honda", "hundai"], transmission: "automatic" };
 eqObjects(carObject , suvCarObject); // => false
 assertEqual(eqObjects(carObject , suvCarObject), false);
+
+module.exports = eqObjects;

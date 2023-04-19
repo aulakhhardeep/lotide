@@ -1,5 +1,5 @@
 {
-  "name": "@aulakhhardeep/lotide",
+  "name": "@aulakh.hardeep91/lotide",
   "version": "1.0.0",
   "description": "Lotide Library",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aulakhhardeep/lotide.git"
+    "url": "git://github.com/aulakhhardeep/lotide.git"
   },
   "author": "Hardeep Kaur Aulakh",
   "license": "ISC",

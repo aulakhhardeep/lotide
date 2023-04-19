@@ -1,8 +1,7 @@
 const assertEqual = require('./assertEqual');
 const countLetters = function(sentenceOfLetters) {
-  let x = sentenceOfLetters.replaceAll(" ", ""); // replaceAll function is removing all occurences of blank space.
-  //console.log(x);
-  let results = {}; // object
+  const x = sentenceOfLetters.replaceAll(" ", "");
+  let results = {};
   for (const letter of x) {
     if (results[letter]) {// here we are accessing a letter from an object.
       results[letter] += 1;
@@ -22,8 +21,6 @@ const result1 = countLetters(stringLetters);
 console.log(result1);
 
 
-//Questions:
-//How to use assertEqual function here?
 assertEqual(result1["l"],1);
 assertEqual(result1["e"],3);
 

@@ -2,6 +2,8 @@
 const head = require('./head');
 const tail = require('./tail');
 const middle = require('./middle');
+const assertEqual = require('./assertEqual');
+const assertArraysEqual = require('./assertArraysEqual');
 const flatten = require('./flatten');
 const eqArrays = require('./eqArrays');
 const findKey = require('./findKey');
@@ -23,6 +25,8 @@ module.exports = {
   head,
   tail,
   middle,
+  assertEqual,
+  assertArraysEqual,
   flatten,
   eqArrays,
   findKey,

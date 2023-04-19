@@ -1,7 +1,7 @@
 const middle = function(array) {
   let result = [];
   if (array.length < 3) {
-    return undefined;
+    return [];
   }
   if (array.length % 2 === 1) {  // when items are even
       result.push(array[Math.floor(array.length / 2)]);

@@ -2,15 +2,11 @@ const assertEqual = require('./assertEqual');
 
 const findKey = function(object, callback) {
   let keys = Object.keys(object);
-  //console.log(keys); // with this getting keys in a array.
   for (let key of keys) {
-    //console.log(key); // getting keys individually.
     if (callback(object[key])) {
-      //console.log(key);
       return key;
     }
   }
-  //console.log("undefined");// just to see if function is working
   return undefined;
 };
 

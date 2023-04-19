@@ -5,7 +5,6 @@ const takeUntil = function(array, callback) {
   for (let item of array) {
     if (!callback(item)) {
       results.push(item);
-      // console.log(results);
     } else {
       break; // it is stopping the loop when condition is met
     }

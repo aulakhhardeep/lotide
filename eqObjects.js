@@ -4,10 +4,8 @@ const assertEqual = require('./assertEqual');
 const eqObjects = function(object1, object2) {
   let key1 = Object.keys(object1); // Object.keys(object1) is returning keys.
   let key1Length = key1.length; //giving the number of keys in object1.
-  //console.log(key1Length);
   let key2 = Object.keys(object2);
   let key2Length = key2.length;
-  //console.log(key2Length);
   if (key1Length !== key2Length) { // checking if number of keys of object1 and object2 are equal or not
     return false;
   }

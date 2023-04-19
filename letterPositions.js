@@ -6,14 +6,14 @@ const letterPositions = function(sentence) {
   for (let j = 0; j < sentenceWithoutSpace.length; j++) {
     {
 
-      if (results[sentenceWithoutSpace[j]]) {// here we are accessing a letter from an object.
-        results[sentenceWithoutSpace[j]] = [...results[sentenceWithoutSpace[j]],j];// .... operator is copying the current content of an array
+      if (results[sentenceWithoutSpace[j]]) {
+        results[sentenceWithoutSpace[j]] = [...results[sentenceWithoutSpace[j]],j];
       }  else {
         results[sentenceWithoutSpace[j]] = [j];
       }
     }
   }
-  //console.log(results);
+  
   return results;
 };
 

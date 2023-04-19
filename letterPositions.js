@@ -1,25 +1,26 @@
 const assertArraysEqual = require('./assertArraysEqual');
 
 const letterPositions = function(sentence) {
-  let sentenceWithoutSpace = sentence.replaceAll(" ", ""); // removing the space
   const results = {}; // to store the final result
-  for (let j = 0; j < sentenceWithoutSpace.length; j++) {
+  for (let j = 0; j < sentence.length; j++) {
     {
-
-      if (results[sentenceWithoutSpace[j]]) {
-        results[sentenceWithoutSpace[j]] = [...results[sentenceWithoutSpace[j]],j];
+     // if (sentence[j] !== ' ') {
+      if (results[sentence[j]]) {
+        results[sentence[j]] = [...results[sentence[j]],j];
       }  else {
-        results[sentenceWithoutSpace[j]] = [j];
+        results[sentence[j]] = [j];
       }
     }
+   // }
   }
-  
-  return results;
+  delete results[' '];
+    return results;
 };
+
 
 
 //Test code
 assertArraysEqual(letterPositions("hello Hardeep").h, [0]);
 assertArraysEqual(letterPositions("hello Hardeep").o, [4]);
-
+console.log(letterPositions("lighthouse in the house"));
 module.exports = letterPositions;

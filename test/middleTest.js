@@ -14,8 +14,8 @@ describe("#middle", () => {
     assert.deepEqual(middle([1, 2, 3, 8, 7, 5, 6]), [8]);
   });
 
-  it("returns undefined for [1, 6]", () => {
-    assert.deepEqual(middle([1, 6]), undefined);
+  it("returns an empty array[]for [1, 6]", () => {
+    assert.deepEqual(middle([1, 6]), []);
   });
 
   it("returns [9, 0] for [1, 7, 9, 0, 2, 6]", () => {

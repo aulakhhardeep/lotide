@@ -11,21 +11,35 @@ const eqObjects = function(object1, object2) {
   }
   for (let key of key1) { // if equal, then for loop is iterating through the keys of objects.
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) { // this line checks if object 1's and object 2's elements are arrays or not. if elements are arrays, then array those arrays to eqArrays to check if they are equal in length and if their values are also equal.
-      eqArrays(object1[key], object2[key]);
+      const result = eqArrays(object1[key], object2[key]);
+      if(!result) {
+        return false;
+      }
+    } else {
+      if (object1[key] !== object2[key]) {
+        return false;
+      }
     }
   }
   return true;
 };
 
-//Test code
-const carObject = { make: ["honda", "hundai"], year: "2020" };
-const anotherCarObject = { year: "2020", make: ["honda", "hundai"] };
-eqObjects(carObject, anotherCarObject); // => true
-assertEqual(eqObjects(carObject , anotherCarObject), true);
+// //Test code
+// const carObject = { make: ["honda", "hundai"], year: "2020" };
+// const anotherCarObject = { year: "2020", make: ["honda", "hundai"] };
+// eqObjects(carObject, anotherCarObject); // => true
+// assertEqual(eqObjects(carObject , anotherCarObject), true);
 
 
-const suvCarObject = { year: "2020", make: ["honda", "hundai"], transmission: "automatic" };
-eqObjects(carObject , suvCarObject); // => false
-assertEqual(eqObjects(carObject , suvCarObject), false);
+// const suvCarObject = { year: "2020", make: ["honda", "hundai"], transmission: "automatic" };
+// eqObjects(carObject , suvCarObject); // => false
+// assertEqual(eqObjects(carObject , suvCarObject), false);
+
+console.log(eqObjects({a:1, b:2}, {b:1, a:1})); // false
+console.log(eqObjects({a:1, b:2}, {b:2, a:2})); // false
+console.log(eqObjects({a:1, b:[2,3]}, {a:1, b:[2,4]})); // false
+console.log(eqObjects({a:[1,2], b:2}, {a:[2,2], b:2})); // false
+console.log(eqObjects({a:1, b:[2,3]}, {a:2, b:[2,3]})); // false
+console.log(eqObjects({a:[1,2], b:2}, {a:[1,2], b:3})); // false
 
 module.exports = eqObjects;

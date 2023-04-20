@@ -1,8 +1,9 @@
+//a function that takes in an object and callback and returns the first key that meets the criteria specified in callback.
 const assertEqual = require('./assertEqual');
 
 const findKey = function(object, callback) {
-  let keys = Object.keys(object);
-  for (let key of keys) {
+  const keys = Object.keys(object);
+  for (const key of keys) {
     if (callback(object[key])) {
       return key;
     }

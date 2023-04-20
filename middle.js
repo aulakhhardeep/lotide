@@ -1,6 +1,6 @@
 const middle = function(array) {
-  let result = [];
-  if (array.length < 3) {
+  let result = []; //a variable to store result in the form of array
+  if (array.length < 3) { //checking if items inside an array are less than 3 (1 or 2) 
     return [];
   }
   if (array.length % 2 === 1) {  // when items are even

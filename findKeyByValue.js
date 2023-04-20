@@ -1,13 +1,14 @@
+//a function that takes in an object and a value and returns the first key that corresponds to that value.
 const assertEqual = require('./assertEqual');
 
-const findKeyByValue = function(object1, value) {
-  let keys = Object.keys(object1);
-  for (let key of keys) {
+const findKeyByValue = function(object1, value) {//object1 and value are parameters
+  const keys = Object.keys(object1); //accessing keys from an object
+  for (const key of keys) { //iterate through each key of object
     if (object1[key] === value) {
-      return key;
+      return key; //returning the first key whose value is matching with the 'value' parameter
     }
   }
-  return undefined;
+  return undefined; //returning undefined if the values of keys does not match with the value we are passing as a parameter
 };
 
 

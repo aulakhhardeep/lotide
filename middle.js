@@ -1,3 +1,4 @@
+//a function that takes in an array and returns middle most element of the array.
 const middle = function(array) {
   let result = []; //a variable to store result in the form of array
   if (array.length < 3) { //checking if items inside an array are less than 3 (1 or 2) 

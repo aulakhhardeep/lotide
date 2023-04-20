@@ -1,3 +1,5 @@
+//a function that takes in a collection of items and returns a specific subset of those items.
+
 //allItems: an array of strings that we need to look through
 //itemsToCount: an object specifying what to count
 const assertEqual = require('./assertEqual');
@@ -30,7 +32,6 @@ const firstNames = [
   "Fang",
   "Joe"
 ];
-//here firstNames is getting passed to allItems array.
 const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 console.log(result1);
 assertEqual(result1["Jason"], 1);

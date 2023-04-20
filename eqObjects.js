@@ -1,3 +1,5 @@
+
+//a function that takes in 2 objects and return true if they are equal and false otherwise.
 const eqArrays = require('./eqArrays');
 const assertEqual = require('./assertEqual');
 
@@ -11,8 +13,8 @@ const eqObjects = function(object1, object2) {
   }
   for (let key of key1) { // if equal, then iterate through the keys of objects.
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) { // this line checks if object 1's and object 2's elements are arrays or not. if elements are arrays, then pass those arrays to eqArrays to check if they are equal in length and if their values are also equal.
-      const result = eqArrays(object1[key], object2[key]); 
-      if (!result) { 
+      const result = eqArrays(object1[key], object2[key]);
+      if (!result) {
         return false;
       }
     } else {
